@@ -22,8 +22,8 @@ var gulp = require('gulp')
 	, iconfontCss = require('gulp-iconfont-css')
 	, dirs = {
 		'source': {
-			'vendorJs': './source/js/vendor/'
-			, 'vendorCss': './source/css/vendor/'
+			'vendorJs': './source/vendor/js/*.js'
+			, 'vendorCss': './source/vendor/css/*.css'
 			, 'favicon': './source/favicon/*.ico'
 			, 'js': './source/elements/**/*.js'
 			, 'fonts': './source/fonts/**/*'
@@ -92,16 +92,26 @@ gulp.task('iconfont', function () {
 	.pipe(gulp.dest(dirs.source.fontsFolder));
 });
 
-
 gulp.task('vendor-js', function() {
+	console.log(mainBowerFiles('**/*.js'));
 	return gulp.src(mainBowerFiles('**/*.js'))
 	.pipe(plumber())
 	.pipe(uglify())
+	.pipe(gulp.dest(dirs.build.vendorJs)),
+	
+	gulp.src(dirs.source.vendorJs)
+	.pipe(plumber())
+	.pipe(uglify())
 	.pipe(gulp.dest(dirs.build.vendorJs));
+
 });
 
 gulp.task('vendor-css', function() {
 	return gulp.src(mainBowerFiles('**/*.css'))
+	.pipe(plumber())
+	.pipe(gulp.dest(dirs.build.vendorCss)),
+
+	gulp.src(dirs.source.vendorCss)
 	.pipe(plumber())
 	.pipe(gulp.dest(dirs.build.vendorCss));
 });
