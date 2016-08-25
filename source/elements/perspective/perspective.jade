@@ -1,3 +1,19 @@
 section.slide
-	h2 perspective
-	+insert-image("perspective_distance.png", "perspective_distance.png" )
+	h2.shout Перспектива
+
+section.slide
+	h2 Perspective
+	pre
+		code .wraper {
+		code	 perspective: none || length;
+		code }
+	p задает глубину сцены родителю
+	pre
+		code .child {
+		code	transform: perspective( none || length)
+		code }
+	p задает глубину сцены родителю
+
+	//- +insert-image("perspective_distance.png", "perspective_distance.png", "place right" )
+			//- p.double some text
+section.slide
