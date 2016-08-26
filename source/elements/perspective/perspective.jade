@@ -3,17 +3,24 @@ section.slide
 
 section.slide
 	h2 Perspective
+	p Задает глубину сцены.
+	p Можно задать двумя способами:
+	ul
+		li perspective:
+		li transform: perspective()
+
+	+insert-image("perspective_distance.png", "perspective_distance.png", "place right")
+section.slide
+	h2 perspective:
+	p задает глубину сцены родителю
 	pre
 		code .wraper {
-		code	 perspective: none || length;
+		code 	perspective: none || length;
 		code }
-	p задает глубину сцены родителю
+section.slide
+	h2 transform: perspective()
+	p задает глубину сцены конкретному елементу
 	pre
 		code .child {
-		code	transform: perspective( none || length)
+		code 	transform: perspective(length)
 		code }
-	p задает глубину сцены родителю
-
-	//- +insert-image("perspective_distance.png", "perspective_distance.png", "place right" )
-			//- p.double some text
-section.slide
