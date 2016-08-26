@@ -10,17 +10,54 @@ section.slide
 		li transform: perspective()
 
 	+insert-image("perspective_distance.png", "perspective_distance.png", "place right")
+
 section.slide
 	h2 perspective:
-	p задает глубину сцены родителю
+	p Задает глубину сцены родителю
 	pre
-		code .wraper {
+		code .wrapper {
 		code 	perspective: none || length;
 		code }
 section.slide
+	pre
+		code .wrapper {
+		code 	perspective: 200px;
+		code }
+		code .block1 {
+		//- code 	width: 300px
+		code 	transform: rotateY(50deg);
+		code }
+
+
+
+section.slide
+	.demo-perspective.wrapper.demo-perspective-1
+		.block-1 block 1
+
+
+
+section.slide
 	h2 transform: perspective()
-	p задает глубину сцены конкретному елементу
+	p 3адает глубину сцены конкретному елементу
 	pre
 		code .child {
-		code 	transform: perspective(length)
+		code 	transform: perspective(length);
 		code }
+
+section.slide
+	pre
+		code .wrapper {
+		code 	perspective: none
+		code }
+		code .block1 {
+		code 	transform: perspective(200px) rotateY(50deg);
+		code }
+		code .block2 {
+		code 	transform: perspective(400px) rotateY(50deg);
+		code }
+
+
+section.slide
+	.demo-perspective.wrapper.demo-perspective-2
+		.block-1 block 1
+		.block-2  block 2

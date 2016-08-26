@@ -1,0 +1,40 @@
+.demo-perspective
+	position: absolute
+	padding: 10px
+	left: 13%
+	top: 10%
+	bottom: 16%
+	right: 13%
+	border: 1px solid #000
+
+
+.block-1,
+.block-2
+	position: absolute
+	width: 300px
+	height: 200px
+	padding: 0 20px
+	top: 50%
+	margin-top: -10%
+	border: 1px solid #000
+.block-1
+	background-color: red
+	left: 8%
+.block-2
+	background-color: blue
+	left: 55%
+
+.demo-perspective-1
+	perspective: 200px
+	.block-1
+		left: 50%
+		margin-left: -150px
+		transform: rotateY(50deg)
+
+.demo-perspective-2
+	perspective: none
+	.block-1
+		left: 20%
+		transform: perspective(200px) rotateY(50deg)
+	.block-2
+		transform: perspective(400px) rotateY(50deg)
