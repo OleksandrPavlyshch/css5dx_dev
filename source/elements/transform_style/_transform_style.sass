@@ -1,0 +1,50 @@
+.transform-style-header
+	+custom-header("anaglifnye_glasses.jpg")
+
+.transform-style-demo
+	position: relative
+	height: 200px
+	width: 200px
+	border: 2px solid blue
+	perspective: 500
+	float: right
+	margin-right: 35px
+	&-line
+		overflow: hidden
+		& + &
+			margin-top: 25px
+		pre
+			float: left
+	&.preserve-3d .parent
+		transform-style: preserve-3d
+	.parent
+		margin: 10px
+		width: 180px
+		height: 180px
+		background-color: #844BCA
+		opacity: 0.8
+		animation: spin 10s infinite linear
+		.child-1,
+		.child-2
+			position: absolute
+			top: 20px
+			left: 20px
+			width: 150px
+			height: 150px
+			padding: 10px
+			-webkit-box-sizing: border-box
+			font-family: monospace
+			font-size: 10pt
+		.child-1
+			background-color: #49DC93
+			transform: translateZ(-70px) rotateY(45deg)
+		.child-2
+			background-color: #FF6
+			transform: translateZ(30px) rotateX(20deg)
+			transform-origin: 50% top
+
+@keyframes spin
+	from
+		-webkit-transform: rotateY(0)
+	to
+		-webkit-transform: rotateY(360deg)
