@@ -1,0 +1,23 @@
+.backface
+	width: 200px
+	height: 200px
+	display: inline-block
+	position: relative
+	animation: spin 4s infinite linear
+	background-color: #844BCA
+	background: url(../img/picachu.png) 50% 50% no-repeat
+	background-size: contain
+	transform-style: preserve-3d
+	&-hidden
+		backface-visibility: hidden
+	&-back
+		background: url(../img/BatmanPikachu.png) 50% 50% no-repeat
+		background-size: contain
+		width: 200px
+		height: 200px
+		display: inline-block
+		position: absolute
+		left: 100%
+		top: 0
+		transform: rotateY(180deg)
+		transform-origin: left top

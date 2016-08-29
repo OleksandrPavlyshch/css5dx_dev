@@ -1,1 +1,28 @@
 section.slide
+	h2.shout А что сзади
+section.slide
+	h2 backface-visibility:
+	p Определяет будет ли видно контент элемента, который с помощью 3d трансформаций отвернут лицом от пользователя.
+	pre
+		code .element {
+		code 	backface-visibility: [ visible | hidden ];
+		code }
+section.slide
+	.demo-line
+		pre
+			code .element {
+			code 	backface-visibility: visible;
+			code }
+		.demo-example
+			.backface.backface-hidden
+				.backface-back.backface-hidden
+
+
+	.demo-line
+		pre
+			code .element {
+			code 	backface-visibility: hidden;
+			code }
+		.demo-example
+			.backface.backface-hidden
+			
