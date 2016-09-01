@@ -1,0 +1,114 @@
+.skew-demo
+	display: inline-block
+	// border: 1px solid #000
+	position: relative
+	width: 300px
+	height: 200px
+	background-color: #fff
+	background-image: linear-gradient($nobel .1em, transparent .1em), linear-gradient(90deg, $nobel .1em, transparent .1em)
+	background-size: 41px 41px
+	background-position: 150px 99px
+	&:before,
+	&:after
+		content: ""
+		position: absolute
+	&:before
+		border-left: 1px solid #000
+		height: 100%
+		left: 50%
+		top: 0
+	&:after
+		border-top: 1px solid #000
+		width: 100%
+		top: 50%
+		left: 0
+	&_base-block,
+	&_skew-block
+		position: absolute
+		left: 50%
+		top: 50%
+		margin: -50px 0 0 -75px
+		width: 150px
+		height: 100px
+		font-size: 19px
+	&_base-block
+		background: #eaeaed
+		border: 2px solid blue
+		opacity: .7
+	&_skew-block
+		border: 2px solid red
+		z-index: 2
+	&_skew-x
+		transform: skewX(30deg)
+		animation: skew-x 2s linear infinite alternate
+	&_skew-y
+		transform: skewY(30deg)
+		animation: skew-y 4s linear infinite alternate
+
+@keyframes skew-x
+	from 
+		transform: skewX(0deg)
+	to 
+		transform: skewX(30deg)
+
+@keyframes skew-y
+	from 
+		transform: skewY(0deg)
+	to 
+		transform: skewY(30deg)
+
+@import url(http://fonts.googleapis.com/css?family=Oswald:400)
+
+.skew-text-baner
+	position: relative
+	width: 330px
+	margin-top: 50px
+	text-transform: uppercase
+	font-family: Helvetica
+	font-size: 24px
+	&_line
+		margin: 0 0 0.45em
+		width: 100%
+		height: 1.6em
+		box-shadow: 10px 10px 10px rgba(0,0,0,0.05)
+		text-align: center
+		text-transform: uppercase
+		font-size: 1em
+		line-height: 1.6em
+		transform: skew(0, -15deg)
+		&:after,
+		&:first-child:before
+			content: ''
+			position: absolute
+			top: 1.05em
+			left: 0
+			z-index: -1
+			display: block
+			width: 100%
+			height: 1.6em
+			border-radius: 6px
+			background: rgba(180,180,180,0.8)
+			transform: skew(0, 9deg)
+		&:first-child:before
+			top: -0.15em
+			right: 0
+			left: auto
+		&:first-child:before,
+		&:last-child:after
+			width: 0
+			height: 0
+			border-width: 0.8em
+			border-style: solid
+			border-color: rgba(180,180,180,0.8) rgba(180,180,180,0.8) transparent transparent
+			background: transparent
+		&:last-child:after
+			top: 0.15em
+			border-color: transparent transparent rgba(180,180,180,0.8) rgba(180,180,180,0.8)
+		&-text
+			display: block
+			width: 100%
+			height: 100%
+			border-radius: 6px
+			background: $gray
+			color: $white
+			text-shadow: 1px 1px 2px $black
