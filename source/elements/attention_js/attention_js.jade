@@ -1,0 +1,19 @@
+section.slide
+	h2.shout Attention JS (event)
+section.slide
+	//- p При слишком частом вызове события происходит большое количество перерисовок корорые тормозят работу страницы
+	p Эсли трансформацыя привязана к событию которое срабатывает слишком часто это может затормозить страницу
+
+section.slide
+	h2 Throttle-debounce jquery plugin
+	a(href="https://github.com/cowboy/jquery-throttle-debounce") https://github.com/cowboy/jquery-throttle-debounce
+
+section.slide
+	h2 Vanilla Js
+	pre
+		code var lastMove = 0;
+		code var myEventInterval = 40 //for example
+		code if(Date.now() - lastMove > myEventInterval) {
+		code 	eventHendler(event);
+		code 	lastMove = Date.now();
+		code }
