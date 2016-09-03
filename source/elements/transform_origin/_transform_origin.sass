@@ -1,0 +1,95 @@
+.transform-origin
+	&_demo
+		width: 300px
+		height: 200px
+		// border: 1px solid $black
+		position: relative
+		&-bell
+			position: absolute
+			left: 0
+			top: 0
+			bottom: 0
+			right: 0
+			margin: auto
+			animation: ring 8s 1s ease-in-out infinite
+			transform-origin: 50% 4px 0
+			&-custom-origin
+				transform-origin: left center 0
+
+@keyframes transform-origin
+	0%
+		transform: rotateZ(-30deg)
+	50%
+		transform: rotateZ(0)
+	100%
+		transform: rotateZ(30deg)
+
+@keyframes ring
+	0%
+		-webkit-transform: rotateZ(0)
+
+	1%, 9%
+		-webkit-transform: rotateZ(30deg)
+
+	3%
+		-webkit-transform: rotateZ(-28deg)
+
+	5%
+		-webkit-transform: rotateZ(34deg)
+
+	7%
+		-webkit-transform: rotateZ(-32deg)
+
+	11%
+		-webkit-transform: rotateZ(-28deg)
+
+	13%
+		-webkit-transform: rotateZ(26deg)
+
+	15%
+		-webkit-transform: rotateZ(-24deg)
+
+	17%
+		-webkit-transform: rotateZ(22deg)
+
+	19%
+		-webkit-transform: rotateZ(-20deg)
+
+	21%
+		-webkit-transform: rotateZ(18deg)
+
+	23%
+		-webkit-transform: rotateZ(-16deg)
+
+	25%
+		-webkit-transform: rotateZ(14deg)
+
+	27%
+		-webkit-transform: rotateZ(-12deg)
+
+	29%
+		-webkit-transform: rotateZ(10deg)
+
+	31%
+		-webkit-transform: rotateZ(-8deg)
+
+	33%
+		-webkit-transform: rotateZ(6deg)
+
+	35%
+		-webkit-transform: rotateZ(-4deg)
+
+	37%
+		-webkit-transform: rotateZ(2deg)
+
+	39%
+		-webkit-transform: rotateZ(-1deg)
+
+	41%
+		-webkit-transform: rotateZ(1deg)
+
+	43%
+		-webkit-transform: rotateZ(0)
+
+	100%
+		-webkit-transform: rotateZ(0)
