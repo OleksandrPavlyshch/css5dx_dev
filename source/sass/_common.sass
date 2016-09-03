@@ -31,3 +31,50 @@ body
 			margin-top: 25px
 		pre
 			float: left
+
+.overflow-visible
+	overflow: visible
+
+.demo-mesh
+	display: inline-block
+	position: relative
+	width: 300px
+	height: 200px
+	background-color: #fff
+	background-image: linear-gradient($nobel .1em, transparent .1em), linear-gradient(90deg, $nobel .1em, transparent .1em)
+	background-size: 41px 41px
+	background-position: 150px 99px
+	&:before,
+	&:after
+		content: ""
+		position: absolute
+	&:before
+		border-left: 1px solid #000
+		height: 100%
+		left: 50%
+		top: 0
+	&:after
+		border-top: 1px solid #000
+		width: 100%
+		top: 50%
+		left: 0
+	&_base-block,
+	&_transform-block
+		position: absolute
+		left: 50%
+		top: 50%
+		margin: -50px 0 0 -75px
+		width: 166px
+		height: 100px
+		font-size: 19px
+	&_base-block
+		background: #eaeaed
+		border: 2px solid blue
+		opacity: .7
+	&_transform-block
+		border: 2px solid red
+		z-index: 2
+
+.preserve-3d
+	transform-style: preserve-3d
+	perspective: 600px

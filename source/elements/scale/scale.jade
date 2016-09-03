@@ -1,1 +1,37 @@
 section.slide
+	h2.shout Увеличение
+section.slide
+	h2 transform: scale()
+	p Маштабирует элемент относительно осей X, Y и Z, и точки задаваемой свойством transform-origin.
+
+
+section.slide
+	.demo-line
+		pre
+			code .element {
+			code 	transform: scaleX(1.5);
+			code }
+		.demo-example
+			.demo-mesh
+				.demo-mesh_base-block
+				.demo-mesh_transform-block.scale-demo_scale-x scaleX(1.5)
+	.demo-line
+		pre
+			code .element {
+			code 	transform: scaleY(1.5);
+			code }
+		.demo-example
+			.demo-mesh
+				.demo-mesh_base-block
+				.demo-mesh_transform-block.scale-demo_scale-y scaleY(1.5)
+
+section.slide
+	.demo-line.overflow-visible
+		pre
+			code .element {
+			code 	transform: scale3d(1.2, 1, 1.5);
+			code }
+		.demo-example
+			.scale-demo_scale-3d.preserve-3d
+				
+				.scale-demo_scale-3d-block scale3d(1, 1, 2)

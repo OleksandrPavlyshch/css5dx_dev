@@ -4,45 +4,6 @@
 	&+&
 		margin-left: 20%
 .skew-demo
-	display: inline-block
-	// border: 1px solid #000
-	position: relative
-	width: 300px
-	height: 200px
-	background-color: #fff
-	background-image: linear-gradient($nobel .1em, transparent .1em), linear-gradient(90deg, $nobel .1em, transparent .1em)
-	background-size: 41px 41px
-	background-position: 150px 99px
-	&:before,
-	&:after
-		content: ""
-		position: absolute
-	&:before
-		border-left: 1px solid #000
-		height: 100%
-		left: 50%
-		top: 0
-	&:after
-		border-top: 1px solid #000
-		width: 100%
-		top: 50%
-		left: 0
-	&_base-block,
-	&_skew-block
-		position: absolute
-		left: 50%
-		top: 50%
-		margin: -50px 0 0 -75px
-		width: 150px
-		height: 100px
-		font-size: 19px
-	&_base-block
-		background: #eaeaed
-		border: 2px solid blue
-		opacity: .7
-	&_skew-block
-		border: 2px solid red
-		z-index: 2
 	&_skew-x
 		transform: skewX(30deg)
 		animation: skew-x 2s linear infinite alternate
