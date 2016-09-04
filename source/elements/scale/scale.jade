@@ -3,6 +3,12 @@ section.slide
 section.slide
 	h2 transform: scale()
 	p Маштабирует элемент относительно осей X, Y и Z, и точки задаваемой свойством transform-origin.
+	pre
+		code transform: scale( number [, number ]? );
+		code transform: scaleX( number );
+		code transform: scaleY( number );
+		code transform: scaleZ( number);
+		code transform: scale3d( number, number, number );
 
 
 section.slide
@@ -26,12 +32,21 @@ section.slide
 				.demo-mesh_transform-block.scale-demo_scale-y scaleY(1.5)
 
 section.slide
-	.demo-line.overflow-visible
+	.demo-line.overflow-visible.clearfix
 		pre
 			code .element {
-			code 	transform: scale3d(1.2, 1, 1.5);
+			code 	transform: scale3d(1, 1, 2);
 			code }
 		.demo-example
 			.scale-demo_scale-3d.preserve-3d
 				
-				.scale-demo_scale-3d-block scale3d(1, 1, 2)
+				.scale-demo_scale-3d-block scale3d(1, 1, 2) rotateX(50deg)
+	.demo-line.overflow-visible.clearfix
+		pre
+			code .element {
+			code 	transform: scaleZ(2);
+			code }
+		.demo-example
+			.scale-demo_scale-z.preserve-3d
+				
+				.scale-demo_scale-z-block scaleZ(2) rotateX(50deg)
