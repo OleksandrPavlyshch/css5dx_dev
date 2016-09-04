@@ -20,6 +20,7 @@ var gulp = require('gulp')
 	, fs = require('fs')
 	, iconfont = require("gulp-iconfont")
 	, iconfontCss = require('gulp-iconfont-css')
+	, deploy = require('gulp-gh-pages')
 	, dirs = {
 		'source': {
 			'vendorJs': './source/vendor/js/*.js'
@@ -93,7 +94,7 @@ gulp.task('iconfont', function () {
 });
 
 gulp.task('vendor-js', function() {
-	console.log(mainBowerFiles('**/*.js'));
+
 	return gulp.src(mainBowerFiles('**/*.js'))
 	.pipe(plumber())
 	.pipe(uglify())
@@ -231,3 +232,20 @@ gulp.task('watch', function(){
 });
 
 gulp.task('default', ['iconfont', 'favicon', 'fonts', 'vendor-js', 'vendor-css', 'js', 'sprite', 'images', 'templates', 'sass', 'connect', 'watch']);
+
+gulp.task('deploy', function () {
+	console.log('deploying');
+	return gulp.src('build/**')
+		.pipe(deploy({
+		cacheDir: 'gh-cache',
+		remoteUrl: 'git@github.com:OleksandrPavlyshch/kharkivcss_css5dx.git'
+		}).on('error', function(){
+			console.log('error', arguments);
+		}));
+});
+
+
+// https://github.com/OleksandrPavlyshch/kharkivcss_css5dx.git
+
+// https://github.com/SilentImp/youDontKnowCSS.git
+// https://github.com/SilentImp/youDontKnowCSS
