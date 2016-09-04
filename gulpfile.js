@@ -243,9 +243,3 @@ gulp.task('deploy', function () {
 			console.log('error', arguments);
 		}));
 });
-
-
-// https://github.com/OleksandrPavlyshch/kharkivcss_css5dx.git
-
-// https://github.com/SilentImp/youDontKnowCSS.git
-// https://github.com/SilentImp/youDontKnowCSS
