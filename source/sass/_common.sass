@@ -9,9 +9,11 @@ body
 =custom-header($img)
 	background: url("../img/" + $img) 50% 50% no-repeat
 	background-size: cover
-	.shout:after
-		display: none
+	.shout
+		&:after
+			display: none
 	h2
+		font-size: 140px !important
 		text-shadow: 3px 4px 10px #000
 
 .cover-frame
