@@ -1,10 +1,12 @@
 .scale-demo
 	&_scale-x
 		transform: scaleX(1.5)
-		animation: scale-x 2s linear infinite alternate
+		.active &
+			animation: scale-x 2s linear infinite alternate
 	&_scale-y
 		transform: scaleY(1.5)
-		animation: scale-y 2s linear infinite alternate
+		.active &
+			animation: scale-y 2s linear infinite alternate
 	&_scale-3d,
 	&_scale-z
 		border: 2px blue solid
@@ -23,9 +25,11 @@
 			border: 2px red solid
 			transform: scale3d(1, 1, 2) rotateX(50deg)
 	&_scale-3d-block
-		animation: scale-3d 2s linear infinite alternate
+		.active &
+			animation: scale-3d 2s linear infinite alternate
 	&_scale-z-block
-		animation: scale-z 2s linear infinite alternate
+		.active &
+			animation: scale-z 2s linear infinite alternate
 
 
 @keyframes scale-x

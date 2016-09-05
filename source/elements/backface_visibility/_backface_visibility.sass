@@ -3,11 +3,12 @@
 	height: 200px
 	display: inline-block
 	position: relative
-	animation: spin 4s infinite linear
 	background-color: #844BCA
 	background: url(../img/picachu.png) 50% 50% no-repeat
 	background-size: contain
 	transform-style: preserve-3d
+	.active &
+		animation: spin 4s infinite linear
 	&-hidden
 		backface-visibility: hidden
 	&-back

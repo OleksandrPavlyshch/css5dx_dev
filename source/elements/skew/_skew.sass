@@ -6,10 +6,12 @@
 .skew-demo
 	&_skew-x
 		transform: skewX(30deg)
-		animation: skew-x 2s linear infinite alternate
+		.active &
+			animation: skew-x 2s linear infinite alternate
 	&_skew-y
 		transform: skewY(30deg)
-		animation: skew-y 4s linear infinite alternate
+		.active &
+			animation: skew-y 4s linear infinite alternate
 
 @keyframes skew-x
 	from
