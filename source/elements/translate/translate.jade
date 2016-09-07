@@ -12,7 +12,9 @@ section.slide
 		code transform: translateZ( length )
 		code transform: translate3d( value , value , length )
 
-section.slide
-	iframe.cover-frame(src="http://sokruta.com.ua/services", frameborder="0")
-section.slide
-	iframe.cover-frame(src="http://mahno.com.ua/uk/", frameborder="0")
+section.slide.white
+	a(href="http://sokruta.com.ua/" target="blank")
+		+insert-image('socruta.jpg', "socruta", "cover")
+section.slide.black
+	a(href="http://mahno.com.ua/uk" target="blank")
+		+insert-image('mahno.jpg', "mahno", "cover")
