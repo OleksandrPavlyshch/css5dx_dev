@@ -1,19 +1,20 @@
 section.slide.perspective-header
 	h2.shout Перспектива
 
-section.slide
-	h2 Perspective
-	p Задает глубину сцены.
-	p Можно задать двумя способами:
-	ul
-		li perspective:
-		li transform: perspective()
+//- section.slide
+//- 	h2 Perspective
+	//- p Задает глубину сцены.
+	//- p Можно задать двумя способами:
+	//- ul
+	//- 	li perspective: none | length;
+	//- 	li transform: perspective( length )
 
-	+insert-image("perspective_distance.png", "perspective_distance.png", "place right")
+	//- +insert-image("perspective_distance.png", "perspective_distance.png", "place right")
 
 section.slide
 	h2 perspective: none | length;
 	p Задает глубину сцены родителю
+	
 	pre
 		code .wrapper {
 			| 	perspective: 200px;
@@ -23,13 +24,6 @@ section.slide
 			| 	width: 300px
 			| 	transform: rotateY(55deg);
 			| }
-
-//- 	pre
-//- 		code.css .wrapper {
-//- 			| 	perspective: none || length;
-//- 			| }
-//- section.slide
-
 
 section.slide
 	.demo-perspective.wrapper.demo-perspective-1
