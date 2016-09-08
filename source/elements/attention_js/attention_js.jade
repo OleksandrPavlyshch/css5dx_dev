@@ -7,22 +7,22 @@ section.slide
 	h2 Vanilla Js
 	pre
 		code var lastMove = 0;
-		code var myEventInterval = 40 //for example
-		code elem.addEventListener( "mousemove", function() {
-		code 	if(Date.now() - lastMove > myEventInterval) {
-		code 		eventHendler(event);
-		code 		lastMove = Date.now();
-		code 	}
-		code });
+			| var myEventInterval = 40 //for example
+			| element.addEventListener( "mousemove", function() {
+			| 	if(Date.now() - lastMove > myEventInterval) {
+			| 		eventHendler(event);
+			| 		lastMove = Date.now();
+			| 	}
+			| });
 
 section.slide
 	h2 Jquery
 	pre
 		code var lastMove = 0;
-		code var myEventInterval = 40 //for example
-		code $elem.on( "mousemove", function() {
-		code 	if(Date.now() - lastMove > myEventInterval) {
-		code 		eventHendler(event);
-		code 		lastMove = Date.now();
-		code 	}
-		code });
+			| var myEventInterval = 40 //for example
+			| $element.on( "mousemove", function() {
+			| 	if(Date.now() - lastMove > myEventInterval) {
+			| 		eventHendler(event);
+			| 		lastMove = Date.now();
+			| 	}
+			| });
