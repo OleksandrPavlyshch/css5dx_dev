@@ -101,6 +101,8 @@
 	height: 2.5em
 	padding: 0 1.5em
 	font-size: 1.5em
+	transition: transform .6s ease
+	will-change: transform
 	&:before,
 	&:after
 		content: ''
@@ -112,13 +114,19 @@
 		right: 0
 		height: 50%
 		z-index: -1
+		transition: box-shadow .6s ease
+	&:hover
+		&:before
+			box-shadow: inset -11px 14px 20px -8px $black
+		&:after
+			box-shadow: inset -11px -14px 20px -8px $black
 	&:before
 		top: 1px
 		transform: skew(45deg)
 	&:after
 		bottom: 1px
 		transform: skew(-45deg)
-		box-shadow: 2px 3px 2px $black
+		// box-shadow: 2px 3px 2px $black
 	&_up
 		transform: rotateZ(-90deg)
 		// &:before
@@ -127,13 +135,20 @@
 		// 	box-shadow: 1px 3px 2px $black
 	&_down
 		transform: rotateZ(45deg) scale3d(1.5, 1.5, 1)
+		&:hover
+			transform: rotateZ(90deg) scale3d(1, 1, 1)
 	&_left
 		transform: scale3d(.75, .75, 1)
+		&:hover
+			transform: scale3d(1, 1, 1)
+			&:before
+				box-shadow: inset 11px 14px 20px -8px $black
+			&:after
+				box-shadow: inset 11px -14px 20px -8px $black
 		&:before
 			transform: skew(-45deg)
 		&:after
 			transform: skew(45deg)
-			box-shadow: -2px 2px 2px $black
 	&_left,
 	&_right
 		margin-bottom: 150px
