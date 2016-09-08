@@ -6,6 +6,10 @@ body
 	min-width: 320px
 	min-height: 320px
 
+.centr-align
+	text-align: center
+
+
 .slide
 	padding: 50px 40px 0 50px
 	h2
@@ -14,7 +18,10 @@ body
 		margin-bottom: 40px
 	pre
 		margin-top: 25px
+		display: inline-block
+		vertical-align: middle
 		margin-bottom: .5em
+		text-align: left
 		code
 			font-size: 30px
 			line-height: 1.6
@@ -22,6 +29,15 @@ body
 	p
 		font-size: 32px
 		line-height: 1.7
+
+.centr-code
+	text-align: center
+	line-height: 625px
+	padding-top: 0
+	pre
+		margin: 0
+	code
+		font-size: 36px !important
 
 =custom-header($img)
 	background: url("../img/" + $img) 50% 50% no-repeat
@@ -62,9 +78,10 @@ body
 	width: 300px
 	height: 200px
 	background-color: #fff
-	background-image: linear-gradient($nobel .1em, transparent .1em), linear-gradient(90deg, $nobel .1em, transparent .1em)
+	background-image: linear-gradient($nobel 1px, transparent 1px), linear-gradient(90deg, $nobel 1px, transparent 1px)
 	background-size: 41px 41px
 	background-position: 150px 99px
+	line-height: 1
 	&:before,
 	&:after
 		content: ""
@@ -88,6 +105,7 @@ body
 		width: 166px
 		height: 100px
 		font-size: 19px
+		line-height: 100px
 	&_base-block
 		background: #eaeaed
 		border: 2px solid blue
@@ -95,6 +113,23 @@ body
 	&_transform-block
 		border: 2px solid red
 		z-index: 2
+
+.centr-example
+	text-align: center
+	.demo-mesh
+		width: 800px
+		height: 500px
+		background-size: 83px 76px
+		&_base-block,
+		&_transform-block
+			width: 498px
+			height: 304px
+			margin: -152px 0 0 -249px
+			border-width: 4px
+			font-size: 2.5em
+			line-height: 304px
+
+
 
 .preserve-3d
 	transform-style: preserve-3d
@@ -125,5 +160,6 @@ body
 
 .slide::after
 	left: 20px !important
-	bottom: 10px !important
+	bottom: 20px !important
 	font-size: 16px
+	line-height: 1
