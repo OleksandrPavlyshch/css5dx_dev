@@ -19,3 +19,15 @@ section.slide.white
 		code 		lastMove = Date.now();
 		code 	}
 		code });
+
+section.slide.white
+	h2 Jquery
+	pre
+		code var lastMove = 0;
+		code var myEventInterval = 40 //for example
+		code $elem.on( "mousemove", function() {
+		code 	if(Date.now() - lastMove > myEventInterval) {
+		code 		eventHendler(event);
+		code 		lastMove = Date.now();
+		code 	}
+		code });
