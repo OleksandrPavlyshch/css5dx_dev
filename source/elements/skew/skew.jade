@@ -13,7 +13,7 @@ section.slide
 		.skew-text-baner_line
 			span.skew-text-baner_line-text it's cool!
 	//- .skew-half
-section.slide
+section.slide.centr-align
 	.skew-arrow.skew-arrow_left left
 	.skew-arrow.skew-arrow_right right
 	.skew-arrow.skew-arrow_up up
@@ -24,32 +24,37 @@ section.slide.white
 	iframe.cover-frame(height='640' scrolling='no' src='//codepen.io/alukard/embed/ZpGojv/?height=640&theme-id=light&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='http://codepen.io/alukard/pen/ZpGojv/')
 
 section.slide
-	h2 transform: skew()
+	h2 transform: skew(angle)
 	p Задает скос элемента относительно осей X и Y, и точки задаваемой свойством 
 		mark transform-origin
 		| .
 	pre
-		code transform: skew(angle [, angle ]?);
-		code transform: skewX(angle);
-		code transform: skewY(angle);
+		code .element {
+			| 	transform: skew(angle [, angle ]?);
+			| }
+	//- 	code transform: skewX(angle);
+	//- 	code transform: skewY(angle);
 
-section.slide
-	.demo-line
-		pre
-			code .element {
-			code 	transform: skewX(30deg);
-			code }
-		.demo-example
-			.demo-mesh
-				.demo-mesh_base-block
-				.demo-mesh_transform-block.skew-demo_skew-x skewX(30deg)
-	.demo-line
-		pre
-			code .element {
-			code 	transform: skewY(30deg);
-			code }
-		.demo-example
-			.demo-mesh
-				.demo-mesh_base-block
-				.demo-mesh_transform-block.skew-demo_skew-y skewY(30deg)
+section.slide.centr-code
+	pre
+		code .element {
+			| 	transform: skewX(30deg);
+			| }
+
+section.slide.centr-example
+	.demo-mesh
+		.demo-mesh_base-block
+		.demo-mesh_transform-block.skew-demo_skew-x skewX(30deg)
+
+section.slide.centr-code
+	pre
+		code .element {
+			| 	transform: skewY(30deg);
+			| }
+
+section.slide.centr-example
+
+	.demo-mesh
+		.demo-mesh_base-block
+		.demo-mesh_transform-block.skew-demo_skew-y skewY(30deg)
 
