@@ -1,9 +1,5 @@
 section.slide.perspective-header
-	h2.shout Перспектива 
-		//- br 
-		//- | Глубина сцены
-	//- h2 Глубина сцены
-	//- +insert-image("persia-prince-perspective.jpg", "persia-prince-perspective.jpg", "cover")
+	h2.shout Перспектива
 
 section.slide
 	h2 Perspective
@@ -16,22 +12,23 @@ section.slide
 	+insert-image("perspective_distance.png", "perspective_distance.png", "place right")
 
 section.slide
-	h2 perspective:
+	h2 perspective: none | length;
 	p Задает глубину сцены родителю
 	pre
 		code .wrapper {
-		code 	perspective: none || length;
-		code }
-section.slide
-	pre
-		code .wrapper {
-		code 	perspective: 200px;
-		code }
-		code .block1 {
-		code 	width: 300px
-		code 	transform: rotateY(55deg);
-		code }
+			| 	perspective: 200px;
+			| }
 
+			| .block1 {
+			| 	width: 300px
+			| 	transform: rotateY(55deg);
+			| }
+
+//- 	pre
+//- 		code.css .wrapper {
+//- 			| 	perspective: none || length;
+//- 			| }
+//- section.slide
 
 
 section.slide
@@ -41,24 +38,16 @@ section.slide
 
 
 section.slide
-	h2 transform: perspective()
+	h2 transform: perspective( length )
 	p 3адает глубину сцены конкретному елементу
 	pre
-		code .child {
-		code 	transform: perspective(length);
-		code }
-
-section.slide
-	pre
-		code .wrapper {
-		code 	perspective: none
-		code }
 		code .block1 {
-		code 	transform: perspective(200px) rotateY(55deg);
-		code }
-		code .block2 {
-		code 	transform: perspective(400px) rotateY(55deg);
-		code }
+			| 	transform: perspective(200px) rotateY(55deg);
+			| }
+			| .block2 {
+			| 	transform: perspective(400px) rotateY(55deg);
+			| }
+
 
 
 section.slide
