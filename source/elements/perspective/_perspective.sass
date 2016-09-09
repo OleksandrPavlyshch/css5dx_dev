@@ -16,7 +16,7 @@
 	.block-1,
 	.block-2
 		position: absolute
-		width: 300px
+		width: 280px
 		height: 200px
 		padding: 0 20px
 		top: 50%
@@ -35,11 +35,36 @@
 		left: 50%
 		margin-left: -150px
 		transform: rotateY(55deg)
+		.active &
+			animation: perspective 4s linear infinite alternate
 
 .demo-perspective-2
 	perspective: none
 	.block-1
-		left: 20%
+		left: 15%
 		transform: perspective(200px) rotateY(55deg)
+		.active &
+			animation: transform-perspective-1 4s linear infinite alternate
 	.block-2
+		transform: perspective(400px) rotateY(55deg)
+		.active &
+			animation: transform-perspective-2 4s linear infinite alternate
+
+
+@keyframes perspective
+	from
+		transform: rotateY(30deg)
+	to
+		transform: rotateY(55deg)
+
+@keyframes transform-perspective-1
+	from
+		transform: perspective(200px) rotateY(30deg)
+	to
+		transform: perspective(200px) rotateY(55deg)
+
+@keyframes transform-perspective-2
+	from
+		transform: perspective(400px) rotateY(30deg)
+	to
 		transform: perspective(400px) rotateY(55deg)
