@@ -1,30 +1,29 @@
 section.slide
 	h2.shout Точка трансформации
 section.slide
-	h2 transform-origin:
+	h2 transform-origin: x, y [,z]?
 	p Устанавливает координаты точки, относительно которой будет происходить трансформация элемента.
 	//- | По умолчанию это центр элемента.
 	pre
 		code .element{
-		code 	transform-origin: 50% 50% 0
-		code 	transform-origin: x, y [,z]?
-		code }
+			| 	transform-origin: 50% 50% 0;
+			| }
 section.slide
 
 
 	.demo-line
 		pre
 			code .element{
-			code 	transform-origin: 50% 4px
-			code }
+				| 	transform-origin: 50% 4px
+				| }
 		.demo-example
 			.transform-origin_demo
 				+insert-image('bell.png', 'bell', "transform-origin_demo-bell")
 	.demo-line
 		pre
 			code .element{
-			code 	transform-origin: left center
-			code }
+				| 	transform-origin: left center
+				| }
 		.demo-example
 			.transform-origin_demo
 				+insert-image('bell.png', 'bell', "transform-origin_demo-bell transform-origin_demo-bell-custom-origin")
