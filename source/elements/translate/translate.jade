@@ -10,16 +10,34 @@ section.slide
 			| 	transform: translate( value [, value ]? );
 			| }
 
-section.slide
+section.slide.centr-code
 	pre
-		code transform: translateX( value )
-		code transform: translateY( value )
-		code transform: translateZ( length )
-		code transform: translate3d( value , value , length )
+		code .element {
+			| 	transform: translateX( value );
+			| }
+section.slide.centr-code
+	pre
+		code .element {
+			| 	transform: translateY( value );
+			| }
+
+section.slide.centr-code
+	pre
+		code .element {
+			| 	transform: translateZ( length );
+			| }
+
+section.slide.centr-code
+	pre
+		code .element {
+			| 	transform: translate3d(value, value, length);
+			| }
+
 
 section.slide.white
 	a(href="http://sokruta.com.ua/" target="blank")
 		+insert-image('socruta.jpg', "socruta", "cover")
+
 section.slide.black
 	a(href="http://mahno.com.ua/uk" target="blank")
 		+insert-image('mahno.jpg', "mahno", "cover")
