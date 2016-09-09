@@ -2,28 +2,28 @@ section.slide.transform-style-header
 	h2.shout Включаем 3D
 
 section.slide
-	h2 transform-style
+	h2 transform-style:
 	p Определяет как вложенные элементы будут отображаться в трехмерном пространстве.
 	pre
 		code .wrapper {
-		code 	transform-style: flat|preserve-3d;
-		code }
+			| 	transform-style: flat | preserve-3d;
+			| }
 
 section.slide
-	.demo-line
+	.demo-line.overflow-visible
 		pre
 			code .wrapper {
-			code 	transform-style: flat;
-			code }
+				| 	transform-style: flat;
+				| }
 		.transform-style-demo
 			.parent
 				.child-1 transform: translateZ(-100px) rotateY(45deg);
 				.child-2 transform: translateZ(50px) rotateX(20deg);
-	.demo-line
+	.demo-line.overflow-visible
 		pre
 			code .wrapper {
-			code 	transform-style: preserve-3d;
-			code }
+				| 	transform-style: preserve-3d;
+				| }
 		.transform-style-demo.preserve-3d
 			.parent
 				.child-1 transform: translateZ(-100px) rotateY(45deg);
