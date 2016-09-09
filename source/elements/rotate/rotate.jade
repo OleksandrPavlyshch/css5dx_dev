@@ -1,15 +1,38 @@
 section.slide
 	h2.shout Повороты
 section.slide
-	h2 transform: rotate
-	p Задает поворот элемента относительно осей X и Y, и точки задаваемой свойством 
+	h2 transform: rotate( angle );
+	p Задает поворот элемента относительно осей X, Y, Z и точки задаваемой свойством 
 		mark transform-origin
 		| .
-	pre
-		code transform: rotate( angle)
-		code transform: rotateX( angle)
-		code transform: rotateY( angle)
-		code transform: rotateZ( angle)
-		code transform: rotate3d( number, number, number, angle)
+	//- pre
+	//- 	code transform: rotate
+	//- 	code transform: rotateX( angle)
+	//- 	code transform: rotateY( angle)
+	//- 	code transform: rotateZ( angle)
+	//- 	code transform: rotate3d( number, number, number, angle)
 
-section.slide
+section.slide.centr-code
+	pre
+		code .element {
+			| 	transform: rotateX( 30deg);
+			| }
+
+section.slide.centr-code
+	pre
+		code .element {
+			| 	transform: rotateY( 30deg);
+			| }
+
+section.slide.centr-code
+	pre
+		code .element {
+			| 	transform: rotateZ( 30deg);
+			| }
+
+section.slide.centr-code
+	pre
+		code .element {
+			| 	transform: rotate3d( 1, 1, 1, 30deg);
+			| }
+
