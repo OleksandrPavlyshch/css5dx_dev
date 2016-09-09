@@ -1,12 +1,17 @@
 section.slide
-	h2.shout Сдвиг
+	h2.shout Перемещение
 section.slide
-	h2 transform: translate
+	h2 transform: translate( value )
 	p Задает сдвиг элемента относительно осей X и Y, и точки задаваемой свойством 
 		mark transform-origin
 		| .
 	pre
-		code transform: translate( value [, value ]? )
+		code .element {
+			| 	transform: translate( value [, value ]? );
+			| }
+
+section.slide
+	pre
 		code transform: translateX( value )
 		code transform: translateY( value )
 		code transform: translateZ( length )
