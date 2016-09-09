@@ -11,8 +11,9 @@
 	&_scale-z
 		border: 2px blue solid
 		position: relative
-		height: 200px
-		width: 250px
+		margin: auto
+		height: 85%
+		width: 65%
 		&-block
 			position: absolute
 			top: 0
@@ -20,16 +21,18 @@
 			right: 0
 			left: 0
 			margin: auto
-			height: 200px
-			width: 230px
+			height: 70%
+			width: 80%
 			border: 2px red solid
 			transform: scale3d(1, 1, 2) rotateX(50deg)
-	&_scale-3d-block
-		.active &
-			animation: scale-3d 2s linear infinite alternate
+			font-size: 2.5em
+			// line-height: 304px
 	&_scale-z-block
 		.active &
 			animation: scale-z 2s linear infinite alternate
+	&_scale-3d-block
+		.active &
+			animation: scale-3d 2s linear infinite alternate
 
 
 @keyframes scale-x
@@ -44,14 +47,14 @@
 	to
 		transform: scaleY(1.5)
 
-@keyframes scale-3d
-	from
-		transform: scale3d(1, 1, 1) rotateX(50deg)
-	to
-		transform: scale3d(1, 1, 2) rotateX(50deg)
-
 @keyframes scale-z
 	from
 		transform: scaleZ(1) rotateX(50deg)
 	to
 		transform: scaleZ(2) rotateX(50deg)
+
+@keyframes scale-3d
+	from
+		transform: scale3d(1, 1, 1) rotateX(50deg)
+	to
+		transform: scale3d(1, 1, 2) rotateX(50deg)

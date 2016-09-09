@@ -1,54 +1,56 @@
 section.slide
 	h2.shout Увеличение
+
 section.slide
-	h2 transform: scale()
+	h2 transform: scale( number );
 	p Маштабирует элемент относительно осей X, Y и Z, и точки задаваемой свойством 
 		mark transform-origin
 		| .
 	pre
-		code transform: scale( number [, number ]? );
-		code transform: scaleX( number );
-		code transform: scaleY( number );
-		code transform: scaleZ( number);
-		code transform: scale3d( number, number, number );
+		code .element {
+			| 	transform: scale( number [, number ]? );
+			| }
 
 
-section.slide
-	.demo-line
-		pre
-			code .element {
-			code 	transform: scaleX(1.5);
-			code }
-		.demo-example
-			.demo-mesh
-				.demo-mesh_base-block
-				.demo-mesh_transform-block.scale-demo_scale-x scaleX(1.5)
-	.demo-line
-		pre
-			code .element {
-			code 	transform: scaleY(1.5);
-			code }
-		.demo-example
-			.demo-mesh
-				.demo-mesh_base-block
-				.demo-mesh_transform-block.scale-demo_scale-y scaleY(1.5)
+section.slide.centr-code
+	pre
+		code .element {
+			| 	transform: scaleX( number );
+			| }
 
-section.slide
-	.demo-line.overflow-visible.clearfix
-		pre
-			code .element {
-			code 	transform: scale3d(1, 1, 2);
-			code }
+section.slide.centr-example
+	.demo-mesh
+		.demo-mesh_base-block
+		.demo-mesh_transform-block.scale-demo_scale-x scaleX(1.5)
+
+section.slide.centr-code
+	pre
+		code .element {
+			| 	transform: scaleY( number );
+			| }
+
+section.slide.centr-example
+	.demo-mesh
+		.demo-mesh_base-block
+		.demo-mesh_transform-block.scale-demo_scale-y scaleY(1.5)
+
+section.slide.centr-code
+	pre
+		code .element {
+			| 	transform: scaleZ( number );
+			| }
+
+section.slide.centr-example
 		.demo-example
-			.scale-demo_scale-3d.preserve-3d
-				
-				.scale-demo_scale-3d-block scale3d(1, 1, 2) rotateX(50deg)
-	.demo-line.overflow-visible.clearfix
-		pre
-			code .element {
-			code 	transform: scaleZ(2);
-			code }
-		.demo-example
-			.scale-demo_scale-z.preserve-3d
-				
-				.scale-demo_scale-z-block scaleZ(2) rotateX(50deg)
+		.scale-demo_scale-z.preserve-3d
+			.scale-demo_scale-z-block scaleZ(2) rotateX(50deg)
+
+section.slide.centr-code
+	pre
+		code .element {
+			| 	transform: scale3d( number, number, number );
+			| }
+
+section.slide.centr-example
+	.scale-demo_scale-3d.preserve-3d
+		.scale-demo_scale-3d-block scale3d(1, 1, 2) rotateX(50deg)
