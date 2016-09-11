@@ -1,0 +1,50 @@
+.transltate-demo
+	&_translate-x
+		transform: translateX(100px)
+		.active &
+			animation: translate-x 4s linear infinite alternate
+	&_translate-y
+		transform: translateY(100px)
+		.active &
+			animation: translate-y 4s linear infinite alternate
+	&_translate-z
+		transform: translateZ(100px)
+		.active &
+			animation: translate-z 4s linear infinite alternate
+	&_3d-wrap
+		perspective: 1500px
+		.demo-mesh
+			transform-style: preserve-3d
+			transform: rotateY(60deg) rotateX(30deg)
+	&_translate3d
+		line-height: 80px !important
+		transform: translateX(100px) translateY(100px) translateZ(100px)
+		.active &
+			animation: translate-3d 4s linear infinite alternate
+
+
+@keyframes translate-x
+	from
+		transform: translateX(0)
+	to
+		transform: translateX(100px)
+
+@keyframes translate-y
+	from
+		transform: translateY(0)
+	to
+		transform: translateY(100px)
+
+@keyframes translate-z
+	from
+		transform: translateZ(0)
+	to
+		transform: translateZ(100px)
+
+@keyframes translate-3d
+	0%
+		transform: translateX(0) translateY(0) translateZ(0)
+	50%
+		transform: translateX(-50px) translateY(-50px) translateZ(100px)
+	100%
+		transform: translateX(50px) translateY(50px) translateZ(100px)
