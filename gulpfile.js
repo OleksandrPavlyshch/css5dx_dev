@@ -62,7 +62,7 @@ gulp.task('connect', function() {
 	connect.server({
 		root: dirs.build.build
 		, livereload: true
-		, port: 8888
+		, port: 3000
 	});
 });
 
