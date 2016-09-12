@@ -1,22 +1,35 @@
 section.slide
 	h2.shout Повороты
+
+section.slide.white
+	a(href="https://www.amazon.com/gp/product/147782202X/ref=s9_acsd_al_bw_c_x_3?pf_rd_m=ATVPDKIKX0DER&pf_rd_s=merchandised-search-7&pf_rd_r=TMC6M4SA9EXCZKV0W90A&pf_rd_t=101&pf_rd_p=2548614302&pf_rd_i=283155" target="blank")
+		+insert-image('amazon-book.jpg', "socruta", "cover")
+
 section.slide
 	h2 transform: rotate( angle );
 	p Задает поворот элемента относительно осей X, Y, Z и точки задаваемой свойством 
 		mark transform-origin
 		| .
-	//- pre
-	//- 	code transform: rotate
-	//- 	code transform: rotateX( angle)
-	//- 	code transform: rotateY( angle)
-	//- 	code transform: rotateZ( angle)
-	//- 	code transform: rotate3d( number, number, number, angle)
+	pre
+		code .element {
+			| 	transform: rotateZ( 30deg );
+			| }
+
+section.slide.centr-example
+	.demo-3d.preserve-3d
+		.demo-3d_inner.rotate-demo_rotate-z rotateZ( 360deg )
+			br
+			| rotate( 360deg )
 
 section.slide.centr-code
 	pre
 		code .element {
-			| 	transform: rotateX( 30deg );
+			| 	transform: rotateX( 60deg );
 			| }
+
+section.slide.centr-example
+	.demo-3d.preserve-3d
+		.demo-3d_inner.rotate-demo_rotate-x rotateX( 60deg )
 
 section.slide.centr-code
 	pre
@@ -24,11 +37,11 @@ section.slide.centr-code
 			| 	transform: rotateY( 30deg );
 			| }
 
-section.slide.centr-code
-	pre
-		code .element {
-			| 	transform: rotateZ( 30deg );
-			| }
+
+section.slide.centr-example
+	.demo-3d.preserve-3d
+		.demo-3d_inner.rotate-demo_rotate-y rotateY( 30deg )
+
 
 section.slide.centr-code
 	pre
@@ -36,3 +49,7 @@ section.slide.centr-code
 			| 	transform: rotate3d( 1, 1, 1, 30deg );
 			| }
 
+
+section.slide.centr-example
+	.demo-3d.preserve-3d
+		.demo-3d_inner.rotate-demo_rotate-3d rotate3d( 1, 1, 1, 360deg )

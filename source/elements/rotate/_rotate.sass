@@ -1,0 +1,43 @@
+.rotate-demo
+	&_rotate-z
+		// transform: rotateZ(0)
+		.active &
+			animation: rotate-z 6s linear infinite
+	&_rotate-x
+		transform: rotateX(60deg)
+		.active &
+			animation: rotate-x 2s linear infinite alternate
+	&_rotate-y
+		transform: rotateY(60deg)
+		.active &
+			animation: rotate-y 2s linear infinite alternate
+	&_rotate-3d
+		transform: rotate3d( 1, 2, 3, 30deg )
+		.active &
+			animation: rotate-3d 4s linear infinite
+
+
+@keyframes rotate-z
+	from
+		transform: rotateZ(0)
+	to
+		transform: rotateZ(360deg)
+
+@keyframes rotate-x
+	from
+		transform: rotateX(0)
+	to
+		transform: rotateX(60deg)
+
+@keyframes rotate-y
+	from
+		transform: rotateY(0)
+	to
+		transform: rotateY(60deg)
+
+
+@keyframes rotate-3d
+	from
+		transform: rotate3d( 1, 1, 1, 0 )
+	to
+		transform: rotate3d( 1, 1, 1, 360deg )
