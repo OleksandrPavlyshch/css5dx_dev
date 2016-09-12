@@ -1,2 +1,38 @@
 section.slide
 	h2.shout Матрицы
+
+section.slide
+	h2 transform: matrix(a, b, c, d, e, f)
+	p Описывает в виде матрицы 2D преобразования елемента.
+	pre
+		code .element {
+			| 	transform: matrix( a, b, 0,
+			| 					   c, d, 0,
+			| 					   tx, ty, 0 );
+			| }
+
+section.slide
+	h2 transform: matrix3d()
+	p Описывает в виде матрицы 3D преобразования елемента.
+	pre
+		code .element {
+			| 	transform: matrix3d( sx, 0, 0, 0,
+			|  						 0, sy, 0, 0,
+			|  						 0, 0, sz, 0,
+			|  						 0, 0, 0, 1 );
+			| }
+
+section.slide.link-slide
+	h2.link-slide_header.half Understanding transforms matrix
+
+	+insert-image("interpolation-of-decomposed-3d-matrix.svg","interpolation-of-decomposed-3d-matrix", "half")
+
+	a(href="https://dev.opera.com/articles/ru/understanding-the-css-transforms-matrix/").link-slide_link http://goo.gl/ZaQ3wR
+
+
+section.slide.link-slide
+	h2.link-slide_header.half Interpolation of 3D matrix
+
+	+insert-image("interpolation-of-decomposed-3d-matrix.svg","interpolation-of-decomposed-3d-matrix", "half")
+
+	a(href="https://www.w3.org/TR/css-transforms-1/#interpolation-of-decomposed-3d-matrix-values").link-slide_link http://goo.gl/Noyqtj	
