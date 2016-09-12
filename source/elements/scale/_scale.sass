@@ -7,26 +7,9 @@
 		transform: scaleY(1.5)
 		.active &
 			animation: scale-y 2s linear infinite alternate
-	&_scale-3d,
-	&_scale-z
-		border: 2px blue solid
-		position: relative
-		margin: auto
-		height: 85%
-		width: 65%
-		&-block
-			position: absolute
-			top: 0
-			bottom: 0
-			right: 0
-			left: 0
-			margin: auto
-			height: 70%
-			width: 80%
-			border: 2px red solid
-			transform: scale3d(1, 1, 2) rotateX(50deg)
-			font-size: 2.5em
-			// line-height: 304px
+	&_scale-3d-block,
+	&_scale-z-block
+		transform: scale3d(1, 1, 2) rotateX(50deg)
 	&_scale-z-block
 		.active &
 			animation: scale-z 2s linear infinite alternate
