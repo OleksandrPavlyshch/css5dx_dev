@@ -1,5 +1,19 @@
 section.slide
 	h2.shout Перемещение
+
+section.slide.white
+	a(href="http://sokruta.com.ua/" target="blank")
+		+insert-image('socruta.jpg', "socruta", "cover")
+
+section.slide.black
+	a(href="http://www.world-of-swiss.com/ru" target="blank")
+		+insert-image('word-of-swiss.jpg', "word-of-swiss", "cover")
+
+
+section.slide.black
+	a(href="http://mahno.com.ua/uk" target="blank")
+		+insert-image('mahno.jpg', "mahno", "cover")
+
 section.slide
 	h2 transform: translate( value )
 	p Задает сдвиг элемента относительно осей X, Y, Z и точки задаваемой свойством 
@@ -60,10 +74,3 @@ section.slide.centr-example.transltate-demo_3d-wrap
 			| translateZ(100px)
 
 
-section.slide.white
-	a(href="http://sokruta.com.ua/" target="blank")
-		+insert-image('socruta.jpg', "socruta", "cover")
-
-section.slide.black
-	a(href="http://mahno.com.ua/uk" target="blank")
-		+insert-image('mahno.jpg', "mahno", "cover")
