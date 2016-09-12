@@ -4,7 +4,7 @@ section.slide
 	//- p При слишком частом вызове события происходит большое количество перерисовок корорые тормозят работу страницы
 	//- p Если трансформация привязана к событию которое срабатывает слишком часто это может затормозить страницу
 section.slide
-	h2 Vanilla Js
+	//- h2 Vanilla Js
 	pre
 		code var lastMove = 0;
 			| var myEventInterval = 40;//for example
@@ -15,17 +15,17 @@ section.slide
 			| 	}
 			| });
 
-section.slide
-	h2 Jquery
-	pre
-		code var lastMove = 0;
-			| var myEventInterval = 40; //for example
-			| $element.on( "mousemove", function() {
-			| 	if(Date.now() - lastMove > myEventInterval) {
-			| 		eventHendler(event);
-			| 		lastMove = Date.now();
-			| 	}
-			| });
+//- section.slide
+//- 	h2 Jquery
+//- 	pre
+//- 		code var lastMove = 0;
+//- 			| var myEventInterval = 40; //for example
+//- 			| $element.on( "mousemove", function() {
+//- 			| 	if(Date.now() - lastMove > myEventInterval) {
+//- 			| 		eventHendler(event);
+//- 			| 		lastMove = Date.now();
+//- 			| 	}
+//- 			| });
 
 
 
