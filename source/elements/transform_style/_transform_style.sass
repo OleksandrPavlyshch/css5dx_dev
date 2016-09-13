@@ -6,11 +6,10 @@
 	height: 200px
 	width: 200px
 	border: 2px solid blue
-	// perspective: 500px
+	perspective: 500
 	float: right
 	margin-right: 35px
-	// &.preserve-3d .parent
-	&_3d
+	&.preserve-3d .parent
 		transform-style: preserve-3d
 	.parent
 		margin: 10px
@@ -28,7 +27,7 @@
 			width: 150px
 			height: 150px
 			padding: 10px
-			box-sizing: border-box
+			-webkit-box-sizing: border-box
 			font-family: monospace
 			font-size: 10pt
 		.child-1
