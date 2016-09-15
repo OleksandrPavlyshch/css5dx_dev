@@ -55,3 +55,16 @@ section.slide.centr-example
 	.demo-3d.preserve-3d
 		.demo-3d_inner.scale-demo_scale-3d-block scale3d(1, 1, 2) rotateX(50deg)
 
+section.slide
+	h2 Маленький лайвхак
+	p Если задать scale c минусовым значением блок отобразится зеркально.
+	pre
+		code .element {
+			| 	transform: scale( -1 );
+			| }
+
+section.slide.centr-example
+	.demo-mesh
+		.demo-mesh_base-block
+		.demo-mesh_transform-block.scale-demo_scale-invert
+			+insert-image('BatmanPikachu.svg', 'BatmanPikachu')
