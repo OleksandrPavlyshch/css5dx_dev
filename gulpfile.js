@@ -141,7 +141,7 @@ gulp.task('templates', function() {
 gulp.task('sass', function () {
 
 	var processors = [
-		autoprefixer({browsers: ['last 1 version'], cascade: false}),
+		autoprefixer({browsers: ['last 3 version'], cascade: false}),
 		mqpacker({
 			sort: function (a, b) {
 				a = a.replace(/\D/g,'');
