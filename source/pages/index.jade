@@ -2,6 +2,12 @@ extends ./layout/default_layout.jade
 
 block title_name
 	title=title
+	meta(property="og:locale" content="en_GB")
+	meta(property="og:type" content="website")
+	meta(property="og:title" content=presentation_name)
+	meta(property="og:description" content=description)
+	meta(property="og:site_name" content=title)
+	meta(property="og:image" content=image_link)
 
 block header
 	include ../elements/header/header
