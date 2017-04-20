@@ -11,6 +11,18 @@ section.slide.white
 	iframe.cover-frame(src="https://oleksandrpavlyshch.github.io/device_orientation_parallax_demo/", frameborder="0")
 
 section.slide
+	h2 requestAnimationFrame
+	pre
+		code var animationFrameId;
+			| function repeatOften() {
+			| 	//magic
+			|	 	animationFrameId = requestAnimationFrame(repeatOften);
+			| }
+			|
+			| cancelAnimationFrame(animationFrameId);
+
+
+section.slide
 	h2 Event throttle
 	pre
 		code var lastMove = 0;
@@ -21,17 +33,7 @@ section.slide
 			| 		lastMove = Date.now();
 			| 	}
 			| });
-//- section.slide
-//- 	h2 Jquery
-//- 	pre
-//- 		code var lastMove = 0;
-//- 			| var myEventInterval = 40; //for example
-//- 			| $element.on( "mousemove", function() {
-//- 			| 	if(Date.now() - lastMove > myEventInterval) {
-//- 			| 		eventHendler(event);
-//- 			| 		lastMove = Date.now();
-//- 			| 	}
-//- 			| });
+
 
 
 
