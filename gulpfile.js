@@ -235,10 +235,10 @@ gulp.task('default', ['iconfont', 'favicon', 'fonts', 'vendor-js', 'vendor-css',
 
 gulp.task('deploy', function () {
 	console.log('deploying');
-	return gulp.src('build/**')
+	return gulp.src('./build/**/*')
 		.pipe(deploy({
 		cacheDir: 'gh-cache',
-		remoteUrl: 'git@github.com:OleksandrPavlyshch/kharkivcss_css5dx.git'
+		remoteUrl: 'https://github.com/OleksandrPavlyshch/jsfwdays_css5dx.git'
 		}).on('error', function(){
 			console.log('error', arguments);
 		}));
