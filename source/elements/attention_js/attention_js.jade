@@ -13,12 +13,12 @@ section.slide.white
 section.slide
 	h2 requestAnimationFrame
 	pre
-		code var animationFrameId;
+		code var frameId;
 			| function repeatOften() {
 			| 	//magic
-			| 	animationFrameId = requestAnimationFrame(repeatOften);
+			| 	frameId = requestAnimationFrame(repeatOften);
 			| }
-			| cancelAnimationFrame(animationFrameId);
+			| cancelAnimationFrame(frameId);
 
 
 section.slide
