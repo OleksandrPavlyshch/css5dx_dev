@@ -36,27 +36,42 @@ section.slide
 			| 	transform: skew(30deg [, 30deg ]?);
 			| }
 
+section.slide.centr-example
+	.demo-mesh
+		.demo-mesh_base-block
+		.demo-mesh_transform-block.skew-demo_skew-x
+			+insert-image("walter_white_breaking_bad.png", "walter_white_breaking_bad", "heisenberg")
+
+
 
 section.slide.centr-code
 	pre
 		code .element {
 			| 	transform: skewX(30deg);
 			| }
+			| .heisenberg {
+			| 	transform: skewX(-30deg);
+			| }
 
 section.slide.centr-example
 	.demo-mesh
 		.demo-mesh_base-block
-		.demo-mesh_transform-block.skew-demo_skew-x skewX(30deg)
+		.demo-mesh_transform-block.skew-demo_skew-x
+			+insert-image("walter_white_breaking_bad.png", "walter_white_breaking_bad", "heisenberg skew-x")
 
 section.slide.centr-code
 	pre
 		code .element {
 			| 	transform: skewY(30deg);
 			| }
+			| .heisenberg {
+			| 	transform: skewY(-30deg);
+			| }
 
 section.slide.centr-example
 
 	.demo-mesh
 		.demo-mesh_base-block
-		.demo-mesh_transform-block.skew-demo_skew-y skewY(30deg)
+		.demo-mesh_transform-block.skew-demo_skew-y 
+			+insert-image("walter_white_breaking_bad.png", "walter_white_breaking_bad", "heisenberg skew-y")
 

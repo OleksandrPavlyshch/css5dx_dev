@@ -11,12 +11,34 @@
 .skew-demo
 	&_skew-x
 		transform: skewX(30deg)
+		background: linear-gradient(0deg, rgba(255,255,255,0.2) 50%, rgba(0,0,0,0) 50%, rgba(0,0,0,0) 0), rgb(0, 170, 238)
+		background-position: auto auto
+		background-origin: padding-box
+		background-size: 43px auto
 		.active &
 			animation: skew-x 2s linear infinite alternate
 	&_skew-y
 		transform: skewY(30deg)
+		background: linear-gradient(0deg, rgba(255,255,255,0.2) 50%, rgba(0,0,0,0) 50%, rgba(0,0,0,0) 0), rgb(0, 170, 238)
+		background-position: auto auto
+		background-origin: padding-box
+		background-size: 43px auto
+
 		.active &
 			animation: skew-y 4s linear infinite alternate
+
+
+.heisenberg
+	max-height: 100%
+	&.skew-x
+		transform: skewX(-30deg)
+		.active &
+			animation: skew-x-reverse 2s linear infinite alternate
+
+	&.skew-y
+		transform: skewY(-30deg)
+		.active &
+			animation: skew-y-reverse 4s linear infinite alternate
 
 @keyframes skew-x
 	from
@@ -24,11 +46,25 @@
 	to
 		transform: skewX(30deg)
 
+@keyframes skew-x-reverse
+	from
+		transform: skewX(0deg)
+	to
+		transform: skewX(-30deg)
+
 @keyframes skew-y
 	from
 		transform: skewY(0deg)
 	to
 		transform: skewY(30deg)
+
+@keyframes skew-y-reverse
+	from
+		transform: skewY(0deg)
+	to
+		transform: skewY(-30deg)
+
+
 
 @import url(http://fonts.googleapis.com/css?family=Oswald:400)
 
